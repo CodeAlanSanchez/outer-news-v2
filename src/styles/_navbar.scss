@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  background: #00000070;
+  z-index: 1;
+  .navbar-list {
+    margin-inline: auto;
+    width: fit-content;
+    padding: var(--size-4) var(--size-6);
+  }
+  .navbar-item {
+    display: inline-block;
+    margin-inline-end: var(--size-7);
+    font-size: var(--font-size-4);
+  }
+  .navbar-link {
+    transition: color 100ms var(--ease-1);
+    text-decoration: none;
+    &:hover {
+      color: var(--gray-0);
+    }
+  }
+}
