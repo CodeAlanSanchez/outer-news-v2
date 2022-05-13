@@ -1,5 +1,25 @@
 .articles {
-    .article {
-        
+  display: grid;
+  padding-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(var(--size-14), 1fr));
+  .article {
+    max-height: var(--size-15);
+    overflow: scroll;
+    padding: var(--size-4);
+    margin: var(--size-2);
+    box-shadow: var(--shadow-2);
+    border-radius: var(--radius-2);
+    border-top: var(--border-size-3) solid var(--orange-3);
+    .article-title {
+      font-size: var(--font-size-3);
+      font-weight: var(--font-weight-5);
+      margin-block: var(--size-2);
     }
+    .article-description {
+      font-size: var(--font-size-1);
+    }
+    .article-image {
+      width: 100%;
+    }
+  }
 }
