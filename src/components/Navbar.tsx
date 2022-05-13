@@ -1,15 +1,21 @@
 const Navbar: React.FC = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="#hero">Home</a>
+    <nav className="navbar">
+      <ul className="navbar-list" role={'list'}>
+        <li className="navbar-item">
+          <a className="navbar-link" href="#hero">
+            Home
+          </a>
         </li>
-        <li>
-          <a href="#articles">Articles</a>
+        <li className="navbar-item">
+          <a className="navbar-link" href="#articles">
+            Articles
+          </a>
         </li>
-        <li>
-          <a href="#articles">About</a>
+        <li className="navbar-item">
+          <a className="navbar-link" href="#about">
+            About
+          </a>
         </li>
       </ul>
     </nav>
