@@ -1,3 +1,70 @@
 .hero {
   min-height: 100vh;
+  background-image: linear-gradient(
+    45deg,
+    var(--blue-9),
+    var(--indigo-9),
+    var(--violet-9),
+    var(--orange-5)
+  );
+  color: var(--gray-9);
+  padding-top: 35vh;
+  .hero-content {
+    margin: auto;
+    background: #00000030;
+    width: 30rem;
+    padding: var(--size-4);
+  }
+}
+
+.planet-1 {
+  top: 0;
+  left: 0;
+  animation: infinite 7000ms moveX linear;
+  z-index: 0;
+  position: absolute;
+  border-radius: var(--radius-round);
+  aspect-ratio: 1;
+  width: 20rem;
+  background-color: var(--gray-0);
+  background-image: linear-gradient(45deg, var(--blue-3), var(--blue-8));
+  overflow: hidden;
+  .land-mass {
+    position: absolute;
+    aspect-ratio: 1;
+    z-index: 0;
+  }
+  .land-mass-1 {
+    top: 0rem;
+    left: 2rem;
+    width: 10rem;
+    background-image: linear-gradient(90deg, var(--green-8), var(--green-9));
+    border-radius: var(--radius-blob-4);
+  }
+  .land-mass-2 {
+    top: 9rem;
+    left: 7rem;
+    rotate: -15deg;
+    width: 8rem;
+    background-image: linear-gradient(45deg, var(--green-8), var(--green-9));
+    border-radius: var(--radius-blob-1);
+  }
+  .land-mass-3 {
+    top: 18rem;
+    left: 7rem;
+    width: 12rem;
+    rotate: -15deg;
+    background-image: linear-gradient(45deg, var(--gray-0), var(--gray-4));
+    border-radius: var(--radius-blob-3);
+  }
+}
+
+@keyframes moveX {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.5, 1);
+  }
 }
