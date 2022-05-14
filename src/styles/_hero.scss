@@ -1,26 +1,29 @@
 .hero {
   min-height: 100vh;
-  background-image: linear-gradient(
-    45deg,
+  overflow: visible;
+  background-image: radial-gradient(
+    circle,
     var(--blue-9),
     var(--indigo-9),
     var(--violet-9),
-    var(--orange-5)
+    var(--gray-9) 130%
   );
-  color: var(--gray-9);
+  color: var(--gray-0);
   padding-top: 35vh;
   .hero-content {
     margin: auto;
     background: #00000030;
-    width: 30rem;
+    width: min(90%, 30rem);
     padding: var(--size-4);
   }
 }
 
 .planet-1 {
-  top: 0;
+  filter: brightness(70%);
+  top: 5rem;
   left: 0;
-  animation: infinite 7000ms moveX linear;
+  animation: infinite 6000ms moveX linear,
+    infinite 6000ms moveY var(--ease-in-out-3);
   z-index: 0;
   position: absolute;
   border-radius: var(--radius-round);
@@ -32,7 +35,6 @@
   .land-mass {
     position: absolute;
     aspect-ratio: 1;
-    z-index: 0;
   }
   .land-mass-1 {
     top: 0rem;
@@ -61,10 +63,27 @@
 
 @keyframes moveX {
   0% {
-    left: -10%;
+    left: -20rem;
   }
   100% {
     left: 100%;
-    animation-timing-function: cubic-bezier(0.02, 0.01, 0.5, 1);
+  }
+}
+
+@keyframes moveY {
+  0% {
+    top: 40rem;
+  }
+  25% {
+    top: 10rem;
+  }
+  50% {
+    top: 5rem;
+  }
+  75% {
+    top: 10rem;
+  }
+  100% {
+    top: 40rem;
   }
 }
