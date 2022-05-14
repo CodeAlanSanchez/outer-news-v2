@@ -1,17 +1,9 @@
 import { useRef } from 'react';
 
 const Hero: React.FC = () => {
-  const planet = useRef(null);
-
-  const loopPlanet = async () => {
-    setTimeout(() => {
-      return planet.current;
-    }, 1000);
-  };
-
   return (
     <div className="hero">
-      <div ref={planet} className="planet-1">
+      <div className="planet-1">
         <div className="land-mass land-mass-1" />
         <div className="land-mass land-mass-2" />
         <div className="land-mass land-mass-3"></div>
