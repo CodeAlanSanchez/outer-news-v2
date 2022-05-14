@@ -1,4 +1,9 @@
-.articles {
+.articles-title {
+  padding-block: var(--size-10);
+  text-align: center;
+}
+
+.article-list {
   display: grid;
   padding-inline: auto;
   grid-template-columns: repeat(auto-fit, minmax(var(--size-14), 1fr));

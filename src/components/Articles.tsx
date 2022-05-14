@@ -19,9 +19,12 @@ const Articles: React.FC<Props> = ({}: Props) => {
 
   return (
     <div className="articles">
-      {data!.data.map((i: any) => (
-        <Article key={i.id} article={i} />
-      ))}
+      <h4 className="articles-title">Articles</h4>
+      <div className="article-list">
+        {data!.data.map((i: any) => (
+          <Article key={i.id} article={i} />
+        ))}
+      </div>
     </div>
   );
 };
