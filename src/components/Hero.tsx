@@ -1,8 +1,6 @@
-import { useRef } from 'react';
-
 const Hero: React.FC = () => {
   return (
-    <div className="hero">
+    <div id="hero" className="hero">
       <div className="planet-1">
         <div className="land-mass land-mass-1" />
         <div className="land-mass land-mass-2" />

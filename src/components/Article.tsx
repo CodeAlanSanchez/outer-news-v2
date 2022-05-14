@@ -4,7 +4,12 @@ interface Props {
 
 const Article: React.FC<Props> = ({ article }: Props) => {
   return (
-    <div className="article">
+    <a
+      target={'_blank'}
+      referrerPolicy={'no-referrer'}
+      href={article.url}
+      className="article"
+    >
       <img
         className="article-image"
         src={article.imageUrl}
@@ -12,7 +17,7 @@ const Article: React.FC<Props> = ({ article }: Props) => {
       />
       <h6 className="article-title">{article.title}</h6>
       <p className="article-description">{article.summary}</p>
-    </div>
+    </a>
   );
 };
 

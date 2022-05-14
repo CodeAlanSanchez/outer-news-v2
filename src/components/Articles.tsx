@@ -15,10 +15,16 @@ const Articles: React.FC<Props> = ({}: Props) => {
 
   if (error) return <Error>error</Error>;
 
-  if (isLoading) return <Loading></Loading>;
+  if (isLoading)
+    return (
+      <>
+        <h4 className="articles-title">Articles</h4>
+        <Loading />
+      </>
+    );
 
   return (
-    <div className="articles">
+    <div id="articles" className="articles">
       <h4 className="articles-title">Articles</h4>
       <div className="article-list">
         {data!.data.map((i: any) => (
