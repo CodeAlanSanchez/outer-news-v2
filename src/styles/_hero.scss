@@ -11,6 +11,7 @@
   color: var(--gray-0);
   padding-top: 35vh;
   .hero-content {
+    position: relative;
     margin: auto;
     background: #00000030;
     width: min(90%, 30rem);
@@ -22,8 +23,7 @@
   filter: brightness(70%);
   top: 5rem;
   left: 0;
-  animation: infinite 6000ms moveX linear,
-    infinite 6000ms moveY var(--ease-in-out-3);
+  animation: infinite 6000ms moveX linear, infinite 6000ms moveY;
   z-index: 0;
   position: absolute;
   border-radius: var(--radius-round);
@@ -72,18 +72,14 @@
 
 @keyframes moveY {
   0% {
-    top: 40rem;
-  }
-  25% {
-    top: 10rem;
+    top: 40vh;
+    animation-timing-function: ease-out;
   }
   50% {
-    top: 5rem;
-  }
-  75% {
-    top: 10rem;
+    top: 5vh;
+    animation-timing-function: ease-in;
   }
   100% {
-    top: 40rem;
+    top: 40vh;
   }
 }
